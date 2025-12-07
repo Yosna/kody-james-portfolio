@@ -62,7 +62,7 @@ export default function BigramModel() {
           Initial project duration:: ~9 days (May 2<sup>nd</sup> - May 11<sup>th</sup>, 2025)
         </p>
         <a
-          href="https://github.com/Yosna/Bigram-Language-Model"
+          href="https://github.com/Yosna/bigram-language-model"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-400 hover:underline"

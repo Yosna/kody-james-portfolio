@@ -78,7 +78,7 @@ export default function TextGenerator() {
           Initial project duration:: ~7 weeks (May 12<sup>th</sup> - June 27<sup>th</sup>, 2025)
         </p>
         <a
-          href="https://github.com/Yosna/Multi-Model-AI-Text-Generator"
+          href="https://github.com/Yosna/multi-model-ai-text-generator"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-400 hover:underline"

@@ -59,7 +59,7 @@ export default function SynthesisTracker() {
           , 2020)
         </p>
         <a
-          href="https://github.com/Yosna/FFXI-Synthesis-Tracker"
+          href="https://github.com/Yosna/ffxi-synthesis-tracker"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-400 hover:underline"

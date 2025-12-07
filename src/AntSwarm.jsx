@@ -56,7 +56,7 @@ export default function AntSwarm() {
           Initial project duration:: ~2 months (April 11<sup>th</sup> - June 4<sup>th</sup>, 2023)
         </p>
         <a
-          href="https://github.com/Yosna/Ant-Swarm/tree/main"
+          href="https://github.com/Yosna/ant-swarm/tree/main"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-400 hover:underline"

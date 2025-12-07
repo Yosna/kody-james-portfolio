@@ -61,7 +61,7 @@ export default function DeathCounter() {
           Initial project duration:: ~2 weeks (April 12<sup>th</sup> - April 26<sup>th</sup>, 2025)
         </p>
         <a
-          href="https://github.com/Yosna/Elden-Ring-Death-Counter"
+          href="https://github.com/Yosna/elden-ring-death-counter"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-400 hover:underline"
