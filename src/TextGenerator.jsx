@@ -17,7 +17,7 @@ export default function TextGenerator() {
 
   return (
     <div className="flex flex-col lg:flex-row h-full w-full bg-primary text-primary">
-      <div className="flex-1 p-8 bg-primary text-primary">
+      <div className="w-full lg:w-1/2 px-6 py-4 bg-primary text-primary">
         <h1 className="text-3xl font-bold text-heading mb-4">Multi-Model AI Text Generator</h1>
         <h2 className="text-xl font-semibold mt-6 mb-2 text-accent">Overview:</h2>
         <p className="mb-4 leading-relaxed text-muted">
@@ -86,7 +86,7 @@ export default function TextGenerator() {
           View on GitHub
         </a>
       </div>
-      <div className="flex-1 p-8 bg-secondary border-l border-code flex justify-center items-center">
+      <div className="w-full lg:w-1/2 px-6 py-4 bg-secondary border-l border-code">
         <div className="w-full h-full flex flex-col">
           <div className="flex items-center justify-between mb-2 ml-8 mr-8">
             <label htmlFor="fileSelect" className="font-medium text-xl text-heading">
@@ -106,11 +106,6 @@ export default function TextGenerator() {
               <option value="tuning.py">&#x251C;&#x2500; tuning.py</option>
               <option value="visualizer.py">&#x251C;&#x2500; visualizer.py</option>
               <option value="config.json">&#x2514;&#x2500; config.json</option>
-              <optgroup label="&#x2514;&#x2500; /utils">
-                <option value="utils/data_utils.py">&#x251C;&#x2500; data_utils.py</option>
-                <option value="utils/io_utils.py">&#x251C;&#x2500; io_utils.py</option>
-                <option value="utils/model_utils.py">&#x2514;&#x2500; model_utils.py</option>
-              </optgroup>
               <optgroup label="&#x2514;&#x2500; /models">
                 <option value="models/registry.py">&#x251C;&#x2500; registry.py</option>
                 <option value="models/base_model.py">&#x251C;&#x2500; base_model.py</option>
@@ -138,6 +133,11 @@ export default function TextGenerator() {
               <optgroup label="&#x2514;&#x2500; /run/helpers">
                 <option value="run/helpers/widgets.py">&#x2514;&#x2500; widgets.py</option>
               </optgroup>
+              <optgroup label="&#x2514;&#x2500; /utils">
+                <option value="utils/data_utils.py">&#x251C;&#x2500; data_utils.py</option>
+                <option value="utils/io_utils.py">&#x251C;&#x2500; io_utils.py</option>
+                <option value="utils/model_utils.py">&#x2514;&#x2500; model_utils.py</option>
+              </optgroup>
               <optgroup label="&#x2514;&#x2500; /tests">
                 <option value="tests/test_main.py">&#x251C;&#x2500; test_main.py</option>
                 <option value="tests/test_cli.py">&#x251C;&#x2500; test_cli.py</option>
@@ -152,7 +152,7 @@ export default function TextGenerator() {
                 </option>
                 <option value="tests/test_io_utils.py">&#x251C;&#x2500; test_io_utils.py</option>
                 <option value="tests/test_model_utils.py">
-                  &#x2514;&#x2500; test_model_utils.py
+                  &#x251C;&#x2500; test_model_utils.py
                 </option>
                 <option value="tests/test_registry.py">&#x251C;&#x2500; test_registry.py</option>
                 <option value="tests/test_base_model.py">

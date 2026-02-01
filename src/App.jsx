@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Home from './Home';
-import MarkdownAnalyzer from './MarkdownAnalyzer';
+import MLux from './MLux';
 import TextGenerator from './TextGenerator';
+import MarkdownAnalyzer from './MarkdownAnalyzer';
 import DeathCounter from './DeathCounter';
 import BigramModel from './BigramModel';
 import SynthesisTracker from './SynthesisTracker';
@@ -18,8 +19,9 @@ function App() {
       <div className="flex-1 h-full">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/markdown-analyzer" element={<MarkdownAnalyzer />} />
+          <Route path="/mlux" element={<MLux />} />
           <Route path="/text-generator" element={<TextGenerator />} />
+          <Route path="/markdown-analyzer" element={<MarkdownAnalyzer />} />
           <Route path="/death-counter" element={<DeathCounter />} />
           <Route path="/bigram-model" element={<BigramModel />} />
           <Route path="/synthesis-tracker" element={<SynthesisTracker />} />

@@ -1,0 +1,197 @@
+{
+  "datasets": {
+    "source": "library",
+    "locations": {
+      "local": {
+        "directory": "dataset",
+        "extension": "txt"
+      },
+      "library": {
+        "data_name": "science"
+      },
+      "huggingface": {
+        "data_name": "pubmed_qa",
+        "config_name": "pqa_artificial",
+        "split": "train",
+        "field": "question"
+      }
+    }
+  },
+
+  "generator_options": {
+    "generator": "prompt",
+    "prompt": "Hello",
+    "context_length": 128,
+    "sampler": "multinomial",
+    "temperature": 1.0
+  },
+
+  "model_options": {
+    "save_model": true,
+    "token_level": "word",
+    "patience": 10,
+    "max_checkpoints": 10
+  },
+
+  "models": {
+    "bigram": {
+      "runtime": {
+        "training": true,
+        "steps": 10000,
+        "interval": 100,
+        "max_new_tokens": 128
+      },
+      "hparams": {
+        "batch_size": 16,
+        "block_size": 32,
+        "lr": 0.001
+      }
+    },
+    "lstm": {
+      "runtime": {
+        "training": true,
+        "steps": 50000,
+        "interval": 500,
+        "max_new_tokens": 256
+      },
+      "hparams": {
+        "batch_size": 32,
+        "block_size": 64,
+        "lr": 0.0015,
+        "embedding_dim": 64,
+        "hidden_size": 128,
+        "num_layers": 2
+      }
+    },
+    "gru": {
+      "runtime": {
+        "training": true,
+        "steps": 50000,
+        "interval": 500,
+        "max_new_tokens": 256
+      },
+      "hparams": {
+        "batch_size": 32,
+        "block_size": 64,
+        "lr": 0.0015,
+        "embedding_dim": 64,
+        "hidden_size": 128,
+        "num_layers": 2
+      }
+    },
+    "transformer": {
+      "runtime": {
+        "training": true,
+        "steps": 100000,
+        "interval": 1000,
+        "max_new_tokens": 256
+      },
+      "hparams": {
+        "batch_size": 32,
+        "block_size": 64,
+        "lr": 0.001,
+        "embedding_dim": 32,
+        "max_seq_len": 128,
+        "num_heads": 2,
+        "ff_dim": 128,
+        "num_layers": 2
+      }
+    },
+    "distilgpt2": {
+      "runtime": {
+        "max_new_tokens": 256
+      },
+      "hparams": {
+        "block_size": 32
+      }
+    }
+  },
+
+  "pruners": {
+    "median": {
+      "n_startup_trials": 5,
+      "n_warmup_steps": 1000
+    },
+    "halving": {
+      "min_resource": 5,
+      "reduction_factor": 2,
+      "min_early_stopping_rate": 1
+    },
+    "hyperband": {
+      "min_resource": 5,
+      "reduction_factor": 2
+    }
+  },
+
+  "tuning_options": {
+    "auto_tuning": false,
+    "save_tuning": true,
+    "save_study": true,
+    "n_trials": 100,
+    "pruner": "hyperband",
+    "step_divisor": 10
+  },
+
+  "tuning_ranges": {
+    "batch_size": {
+      "type": "int",
+      "min": 16,
+      "max": 128,
+      "step": 16
+    },
+    "block_size": {
+      "type": "int",
+      "min": 32,
+      "max": 256,
+      "step": 32
+    },
+    "lr": {
+      "type": "float",
+      "min": 0.0001,
+      "max": 0.01,
+      "log": true
+    },
+    "embedding_dim": {
+      "type": "int",
+      "min": 16,
+      "max": 128,
+      "step": 16
+    },
+    "hidden_size": {
+      "type": "int",
+      "min": 32,
+      "max": 256,
+      "step": 32
+    },
+    "num_layers": {
+      "type": "categorical",
+      "values": [1, 2, 3, 4]
+    },
+    "max_seq_len": {
+      "type": "int",
+      "min": 32,
+      "max": 256,
+      "step": 32
+    },
+    "num_heads": {
+      "type": "int",
+      "min": 2,
+      "max": 8,
+      "step": 2
+    },
+    "ff_dim": {
+      "type": "int",
+      "min": 32,
+      "max": 256,
+      "step": 32
+    }
+  },
+
+  "visualization": {
+    "save_plot": true,
+    "show_plot": true,
+    "smooth_loss": true,
+    "smooth_val_loss": true,
+    "weight": 0.9
+  }
+}

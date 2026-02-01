@@ -36,14 +36,18 @@ export default function Home() {
         <div>My recent projects include:</div>
         <ul className="list-disc list-inside mt-2 text-left">
           <li>
-            <b>Markdown Analyzer</b> - A SaaS application for analyzing and improving markdown
-            files, featuring a React frontend, Flask backend, Firebase Auth, Stripe subscription
-            management, and OpenAI integration, with full testing and production deployment.
+            <b>MLux</b> - An expansion of the multi-model framework, implementing an export system
+            with four different formats and an end-to-end GUI pipeline on top of the CLI framework.
           </li>
           <li>
             <b>Multi-Model AI Text Generator</b> - A modular, extensible framework supporting
             bigram, LSTM, GRU, and transformer models, with full unit testing and
             configuration-driven design.
+          </li>
+          <li>
+            <b>Markdown Analyzer</b> - A SaaS application for analyzing and improving markdown
+            files, featuring a React frontend, Flask backend, Firebase Auth, Stripe subscription
+            management, and OpenAI integration, with full testing and production deployment.
           </li>
           <li>
             <b>Elden Ring Death Counter</b> - A memory-reading overlay for tracking deaths in real

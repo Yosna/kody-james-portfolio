@@ -25,7 +25,7 @@ export default function MarkdownAnalyzer() {
 
   return (
     <div className="flex flex-col lg:flex-row h-full w-full bg-primary text-primary">
-      <div className="flex-1 p-8 bg-primary text-primary">
+      <div className="w-full lg:w-1/2 px-6 py-4 bg-primary text-primary">
         <h1 className="text-3xl font-bold text-heading mb-4">Markdown Analyzer</h1>
         <h2 className="text-xl font-semibold mt-6 mb-2 text-accent">Overview:</h2>
         <p className="mb-4 leading-relaxed text-muted">
@@ -82,7 +82,7 @@ export default function MarkdownAnalyzer() {
           View Live App
         </a>
       </div>
-      <div className="flex-1 p-8 bg-secondary border-l border-code flex justify-center items-center">
+      <div className="w-full lg:w-1/2 px-6 py-4 bg-secondary border-l border-code">
         <div className="w-full h-full flex flex-col">
           <div className="flex items-center justify-between mb-2 ml-8 mr-8">
             <label htmlFor="fileSelect" className="font-medium text-xl text-heading">
