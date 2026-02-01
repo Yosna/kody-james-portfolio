@@ -4,7 +4,7 @@ This is my personal programming portfolio, built with React, Vite, and Tailwind 
 
 ## Website
 
-You can view the portfolio [here](https://yosna.github.io/Kody-James-Portfolio/)—deployed live through GitHub Pages.
+You can view the portfolio [here](https://yosna.github.io/kody-james-portfolio/)—deployed live through GitHub Pages.
 
 ## Built With
 
