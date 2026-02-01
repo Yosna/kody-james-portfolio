@@ -2,8 +2,8 @@
 #Include json.ahk
 
 SaveSettings(game) {
-    if !DirExist(game.gameDir) {
-        DirCreate(game.gameDir)
+    if !DirExist(game.directory) {
+        DirCreate(game.directory)
     }
 
     local character := EncodeHex(JSON.stringify(GetCharacter(game)))
@@ -38,8 +38,8 @@ SaveSettings(game) {
 }
 
 LoadSettings(game) {
-    if !DirExist(game.gameDir) {
-        DirCreate(game.gameDir)
+    if !DirExist(game.directory) {
+        DirCreate(game.directory)
     }
 
     if !FileExist(game.settings) {

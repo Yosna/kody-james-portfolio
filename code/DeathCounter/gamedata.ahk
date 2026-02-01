@@ -1,8 +1,9 @@
 ﻿global game := {
     name: "Elden Ring",
-    userDir: A_AppData . "\EldenRing\DeathCounter",
-    gameDir: "C:\Program Files (x86)\Steam\steamapps\common\ELDEN RING\Game\",
+    registry: "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Steam App 1245620",
     exe: "eldenring.exe",
+    directory: A_AppData . "\EldenRing\DeathCounter",
+    settings: A_AppData . "\EldenRing\DeathCounter\settings.ini",
     pointer: 0x03D5DF38,
     offsets: {
         character:   [ {offset: +0x08, type: "UInt64"}, {offset: +0x9C,  type: "Str"} ],
@@ -29,7 +30,6 @@ DetectGame(game) {
     if pid := ProcessExist(game.exe) {
         game.pid := pid
         game.baseAddress := GetBaseAddress(pid)
-        game.settings := game.userDir . "\settings.ini"
     }
 
     return ValidateGame(game)
@@ -67,10 +67,11 @@ ValidateGame(game) {
 
 BypassEAC(game) {
     local time := A_TickCount
-    local path := game.gameDir . game.exe
+    local directory := RegRead(game.registry, "InstallLocation") . "\Game\"
+    local path := directory . game.exe
 
     EnvSet("SteamAppId", "1245620")
-    Run('cmd.exe /c ""' . path . '""', game.gameDir , "Hide", &pid)
+    Run('cmd.exe /c ""' . path . '""', directory , "Hide", &pid)
     
     while (A_TickCount - time < TIMEOUT_MS) {
         if ProcessExist(game.exe) {
