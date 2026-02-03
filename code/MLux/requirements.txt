@@ -1,8 +1,0 @@
-datasets==4.4.1
-dearpygui==2.1.1
-matplotlib==3.10.7
-optuna==4.6.0
-PyInstaller==6.17.0
-torch==2.9.1
-torchao==0.14.1
-transformers==4.57.3
