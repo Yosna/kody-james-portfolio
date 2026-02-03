@@ -122,10 +122,10 @@ export default function MLux() {
                 <option value="run/ui/widgets.py">&#x2514;&#x2500; widgets.py</option>
               </optgroup>
               <optgroup label="&#x2514;&#x2500; /services">
-                <option value="run/services/application.py">&#x251C;&#x2500; application.py</option>
-                <option value="run/services/architecture.py">&#x251C;&#x2500; architecture.py</option>
-                <option value="run/services/exporter.py">&#x251C;&#x2500; exporter.py</option>
-                <option value="run/services/wrappers.py">&#x2514;&#x2500; wrappers.py</option>
+                <option value="services/application.py">&#x251C;&#x2500; application.py</option>
+                <option value="services/architecture.py">&#x251C;&#x2500; architecture.py</option>
+                <option value="services/exporter.py">&#x251C;&#x2500; exporter.py</option>
+                <option value="services/wrappers.py">&#x2514;&#x2500; wrappers.py</option>
               </optgroup>
               <optgroup label="&#x2514;&#x2500; /utils">
                 <option value="utils/data_utils.py">&#x251C;&#x2500; data_utils.py</option>
